@@ -1,0 +1,252 @@
+<!----Aqui adentro va nuestro comentario-->
+
+
+
+<!DOCTYPE html><!--El tipo de documento-->
+<html lang="en"><!--Especificamos el lenguage de nuestro documento-->
+
+
+<!--Aqui empieza mi cabecera o head-->
+<head>
+    <!--Las etiquetas meta son instrucciones que le damos a nuestro navegador para que sea interpretado por el de forma correcta-->
+    <meta charset="UTF-8"><!--Tipo de codificacion de nuestro documento(para poder usar ñ y acentos)-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--Compatibilidad entre navegadores-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Ancho de la pantalla(no confundir con diseño responsivo)-->
+    <title>Esta es mi primera pagina HTML</title><!--Esta informacion aparece en la pestaña del navegador-->
+</head>
+<!--Aqui termina mi cabecera o head-->
+
+
+
+
+
+<!--Aqui empieza el cuerpo de nuestro documento-->
+<body>
+
+    <!--Etiquetas de titulo o cabecera de texto: h1 ,h2 ,h3 ,h4 ,h5 ,h6. Las etiquetas de cabecera de texto nos permiten crear un encabezado de texto, y estas etiquetas tienen atributos que nos permiten definir el tamanio, color, estilo, etc.-->
+    <h1>Titulo de nuestra pagina</h1><!--16pixeles-->
+    <h2>Introduccion</h2><!--12pixeles-->
+    <h3>Tema 1</h3><!--9pixeles-->
+    <h4>Subtema 1</h4><!--6pixeles-->
+    <h5>Sub subtema 1</h5><!--5pixeles-->
+    <h6>Sub sub subtema 1</h6><!--4pixeles-->
+
+   <!--Atributos son aspectos que nos permiten modificar la forma enc omo vemos algunas etiquetas. 
+
+Atributos globales: Son aquellos que se pueden aplicar a todos los elementos del documento, y no dependen de la etiqueta. Algunos de ellos son...
+
+    - class
+    - ID
+    - Style
+    - Event
+
+-->
+
+        <p align="Left" style="color:rgb(0, 78, 0)">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi at fugiat ratione, quisquam porro voluptate aut alias laudantium? Officia hic velit quaerat, temporibus error odit necessitatibus pariatur commodi numquam natus!</p>
+        <p align="right">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi at fugiat ratione, quisquam porro voluptate aut alias laudantium? Officia hic velit quaerat, temporibus error odit necessitatibus pariatur commodi numquam natus!</p>
+        <br>
+        <br>
+        <br>
+
+        <p align="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi at fugiat ratione, quisquam porro voluptate aut alias laudantium? Officia hic velit quaerat, temporibus error odit necessitatibus pariatur commodi numquam natus!</p>
+
+
+<!--Esta es la forma para anidar etiquetas-->
+
+<p>
+    <b>
+        <u>
+
+        </u>
+    </b>
+</p>
+
+<blockquote><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste veritatis quod excepturi facere accusamus dolorem. Suscipit itaque praesentium mollitia aliquid fuga quasi id pariatur a! In tempora numquam eum reiciendis.</p></blockquote>
+<hr>
+
+<!--Etiquetas divisorias y seperadores hr y br
+   
+    hr nos sirve para dar una separacion entre parrafos (veremos una etiqueta horizontal que usaremos de separador. No necesita una etiqueta de cierra.)
+
+     <hr>
+
+     br nos sirve para dar una separacion entre parrafos a manera de salto de linea, y al igual que la etiqueta gr no necesita etiqueta de cierre.
+
+     <br>
+    
+
+-->
+
+<!--
+    Etiquetas de enlace <a> </a>
+
+    Los enlaces nos permiten la navegacion por medio de hipervinculos o links quem van a realizar la conexion y referencian otros archivos o paginas web dentro de la misma aplicacion o de manera externa.
+
+    Atributos de la etiqueta <a>
+
+    href: atributo que nos permite definir la ubicacion de la pagina a la que nos vamos a enlazar. Este atributo puede ser una URL, o una ubicacion  dentro de nuestra carpeta de assets. Pondremos dentro de las comillas la direccion de la pagina o recurso que queremos enlazar.
+
+
+    target: el atributo que nos permite definir la ventana del destino, que puede ser una nueva ventana o la misma.
+        - _blank: abre una nueva ventana
+        - _self: arbrir en la misma ventana, este es el atributo por defecto.
+
+-->
+
+
+<a>Este es un enlace, como no tiene ninguna referencia, no hace nada</a>
+<br>
+<br>
+<a href="https://www.google.com" target="_blank">Visita la pagina de google para buscar mas fotos de perritos playerps</a>
+<br>
+<br>
+<a href="assets/perritoplayero.jpg" target="_blank">Abre una bonita foto de un perrito playero</a>
+
+<!--Otros cenlaces que nos pueden servir mas adelante
+
+     - enlaces de correo: Para vincular correos
+    
+    mailto:armandoandrade.m0@gmail.com
+
+     - enlaces de descarga: Dentro del atributo href se puede colocar la direccion de la pagina o arhivo que se va a descargar, y el calor download que nos permite definir el nombre del archivo que se descarga
+    -->
+<br>
+<br>
+    <a href="mailto:armandoandrade.0@gmail.com">Enviame un correo electronico</a>
+
+    <br>
+    <br>
+
+    <a href="assets/perritoplayero.jpg" download>Descarga la foto del perrito playero</a>
+
+
+    <!--
+
+         Etiquetas de listas ordenadas, desordenadas y listas de definiciones(ul, ol, dl)
+
+        Las listas en HTML nos permite crear conjuntos de elementos en forma de lista dentro de una página. Estos elementos irán precedidos por un guión o número.
+
+    Los tipos de listas que tenemos en HTMl son:
+
+    - Listas ordenadas: Son aquellas que nos muestran los elementos de la lista en orden. Para representar el orden, tendremos los elementos numeros, es decir, cada uno de los elementos irá precedido de un número o letra que establezca su orden. Las listas ordenadas se representan mediante la etiqueta ol.
+
+
+    Atributos de listas ordenadas:
+
+        - start para definir el orden inicial, por defecto es 1
+        - type pra indicar el tipo de lista que se va a crear
+            - decimal para numeros enteros
+            - lower-alpha para letras minusculas
+            - lower -roman para letras minusculas en romano
+            - upper-alpha para letras mayusculas
+            - upper-roman para mayuscas en romano
+        - reversed: para invertir el orden de los elementos
+    
+
+
+    -->
+
+
+
+    <h3>Esta es una lista ordenada de perritos sin atributos</h3>
+
+    <ol> <!--Order list-->
+        <li> Dalmata</li> <!--List item-->
+        <li> Labrador</li>
+        <li> Chihuahua</li>
+        <li> Pitbull</li>
+    </ol>
+
+
+    <h3>Esta es una lista ordenada de perritos con atributos</h3>
+
+    <ul type="a" start="15">
+        <li> Dalmata</li> 
+        <li> Labrador</li>
+        <li> Chihuahua</li>
+        <li> Pitbull</li>
+
+    </ul>
+
+
+    <h3>Esta es una lista desordenada de perritos con atributos</h3>
+
+    <ul type="square">
+        <li> Dalmata</li> 
+        <li> Labrador</li>
+        <li> Chihuahua</li>
+        <li> Pitbull</li>
+
+    </ul>
+
+
+    <h3>Lista de definiciones</h3>
+
+<dl> <!--definition list-->
+    <dt>Gato</dt> <!--definition term!-->
+    <dd>Mamífero carnívoro de la familia de los Félidos, digitígrado, doméstico, de unos cinco decímetros de largo desde la cabeza hasta el arranque de la cola, que por sí sola mide dos decímetros aproximadamente. Pareciera que planean dominar al mundo</dd>
+    <dt>Perro</dt>
+    <dd>Mamífero doméstico de la familia de los cánidos, de tamaño, forma y pelaje muy diversos, según las razas, que tiene olfato muy fino y es inteligente y muy leal a su dueño. Es el mejor amigo del hombre</dd>
+</dl>
+
+
+<!--
+
+    Etiquetas de imagin(img)
+
+    Etiquetas de imagen (img)
+
+    La etiqueta img nos permite agregar una imagen en un documento web. Entre los formatos aceptados más populares para las imágenes son: jpeg, png, gif y webp.
+
+    Debemos tener en centa que el tamaño de la imagen influye en el proceso de carga de la página. Y por tanto se suelen preparar las imagnes para que su peso sea menor. https://tinypng.com/
+
+    Los atributos de la etiqueta img son:
+
+    - src: es el atributo que nos permite definir la ubicación de la imagen.
+    - alt: es el atributo que nos permite definir una descripción de la imagen.
+    - width: es el atributo que nos permite definir el ancho de la imagen.
+    - height: es el atributo que nos permite definir el alto de la imagen.
+
+-->
+
+<img src="/assets/perritoplayero.jpg" width="500px" alt="Esta es una foto de un perrito playero">
+
+<br>
+<br>
+
+
+<!--
+    Etiquetas de divisiones (div y span)
+
+     Las etiquetas div y span no tienen ningun signidicado especial, sólo que la etqueta div se define como un elemento bloque y la etiqueta span es un elemento de linea.
+
+    -div: Este es un bñoque de texto, se utiliza pra agrupar elementos en una sola seccion, es decir, si queremos agrupar una imagen y un texto, debemos utilizar un div.
+-->
+
+
+
+<div align="center" style="color: blueviolet; font-size: larger; font-family: Verdana, Geneva, Tahoma, sans-serif;"> 
+    <img src="/assets/perritoplayero.jpg" alt="Perrito Playero" width="200" height="200">
+    <p>Este texto donde vemos a un bonito perro playero. Este texto está dentro de un div, por lo que si le agregamos estilos directamente al div, podemos agregar colores, fuentes, etc.</p>
+    <p>Incluso podemos agregar listas a este div, y como te puedes dar cuenta, también se le agregan los estilos, por lo que los elementos de la lista también se centrarán de un color morado.</p>
+    <ul>
+        <li> Un elemento de lista centrado </li>
+        <li> Otro elemento de lista centrado </li>
+    </ul>
+    </div>
+
+    <div align="center" style="border: 10px dotted blue;">
+        <h3 >Ejemplo de div y span </h3>
+         <p>
+          Esto es un párrafo dentro de un div,
+           <span style="color: red;"> y esto un span dentro de un párrafo. </span>
+         </p>
+       </div>
+
+
+
+
+      
+</body>
+<!--Aqui termina el cuerpo de nuestro documento-->
+</html>
